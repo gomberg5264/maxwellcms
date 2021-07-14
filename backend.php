@@ -15,4 +15,14 @@ class cms{
 
               
       )
-   
+     MySQL_QUERY;
+
+      return mysql_query($sql);
+  }
+
+  public function connect() {
+    mysql_connect($this->host,$this->username,$this->password) or die("Could not connect. " . mysql_error());
+    mysql_select_db($this->table) or die("Could not select database. " . mysql_error());
+
+    return $this->buildDB();
+  } 
