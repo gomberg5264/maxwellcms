@@ -85,3 +85,16 @@ class cms{
 
     ENTRY_DISPLAY;
       }
+    
+    
+      $entry_display .= <<<ADMIN_OPTION
+
+      <p class="admin_link">
+        <a href="{$_SERVER['PHP_SELF']}?admin=1">Add a New Entry</a>
+      </p>
+
+      ADMIN_OPTION;
+
+      return $entry_display;
+  }
+
